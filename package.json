@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "watch": "nodemon --exec 'electron .'",
+    "watch": "nodemon --exec electron .",
     "dist": "electron-builder"
   },
   "repository": "https://github.com/oreste-abizera/money-maker",
@@ -20,9 +20,9 @@
     "electron-builder": "^22.3.2"
   },
   "build": {
-    "appId": "com.domainname.appname",
+    "appId": "com.oreste.money-maker",
     "buildVersion": "1",
-    "productName": "money-maker",
+    "productName": "Money Maker",
     "copyright": "Copyright © 2022 Oreste Abizera",
     "mac": {
       "target": "mas",
