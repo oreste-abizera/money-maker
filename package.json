@@ -1,0 +1,39 @@
+{
+  "name": "money-maker",
+  "version": "1.0.0",
+  "description": "Money Maker app scam",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec 'electron .'",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/oreste-abizera/money-maker",
+  "keywords": [
+    "Electron",
+    "mas"
+  ],
+  "author": "Oreste Abizera",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^6.1.7",
+    "electron-builder": "^22.3.2"
+  },
+  "build": {
+    "appId": "com.domainname.appname",
+    "buildVersion": "1",
+    "productName": "money-maker",
+    "copyright": "Copyright © 2022 Oreste Abizera",
+    "mac": {
+      "target": "mas",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "category": "public.app-category.education",
+      "icon": "build/icon.icns",
+      "entitlements": "build/entitlements.mas.plist",
+      "entitlementsInherit": "build/entitlements.mas.inherit.plist",
+      "provisioningProfile": "build/MacAppStore.provisionprofile"
+    }
+  },
+  "dependencies": {}
+}
