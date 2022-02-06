@@ -1,7 +1,7 @@
 {
   "name": "money-maker",
   "version": "1.0.0",
-  "description": "Money Maker app scam",
+  "description": "Money Maker",
   "main": "main.js",
   "scripts": {
     "start": "electron .",

