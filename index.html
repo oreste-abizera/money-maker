@@ -11,13 +11,17 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
+    <link rel="stylesheet" href="main.css" />
     <title>Money Maker</title>
   </head>
   <body>
-    <h1>Welcome To Mooney Maker app</h1>
-    We are using Node.js <span id="node-version"></span>, Chromium
-    <span id="chrome-version"></span>, and Electron
-    <span id="electron-version"></span>.
+    <div class="container">
+      <h1>Welcome To Money Maker</h1>
+
+      <p>Wait until you get the accepted to receive the money</p>
+      <h2 id="countdown"></h2>
+      <p>Feel free to continue doing your activities and come back later</p>
+    </div>
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
